@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>数字内容</title>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" />
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+  
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/source.css" />
+    <script type="text/javascript" src="js/source.js"></script>
+</head>
+<body>
+<div class="shadowDiv">
+    <p class="urlTitle">&nbsp;</p>
+	<img src="images/allTitle/closeImg.png" class="closeNetImg">
+	<div class="shadowContent">
+    	
+    	<div class="addContent">
+        </div>
+        <input class="sumitBtn submitnet" type="submit" value="提交" onclick="submitnet()"/>
+        <input class="sumitBtn yulanBtn" type="button" value="预览" onclick="privewnet()"/>
+    </div>
+    <div class="urlContent">
+    	<div class="addUrlContent">
+        	<p>
+                <span class="urlAddress" style="display:block;width:30%;float:left;">网址：</span>
+                <input type="text" placeholder="请输入网址" class='inputText  inNetAddress' tabindex ="0"  style='width:43%;'/>
+       			<select>
+                </select>
+                <span class="cleartext" style="width:20px" style="margin-top:-22px !important;"><img src="images/newSource/clear.png" /></span>
+            </p>
+        </div>
+        <div class="checkHttp" style="font-size:13px;">
+            <label><input type="radio" name="prefix" value="http://" checked="checked"/>http://</label>&nbsp;&nbsp;
+            <label><input type="radio" name="prefix" value="https://" />https://</label>&nbsp;&nbsp;
+            <label><input type="radio" name="prefix" value="" />无前缀</label>
+        </div>
+        <input class="sumitBtn submiturl" type="submit" value="提交" onclick="submiturl()"/>
+        <input class="sumitBtn yulanurl" type="button" value="预览" onclick="privewurl()"/>
+    </div>
+</div>
+<div class="top">
+    <div class="search">
+    	<img class="logo" src="images/newSource/tubiao_03.png" />
+        <input class="searchName" type="text" placeholder="请输入您要搜索内容的首字母缩写"/>
+        <img class="searchImg" src="images/newSource/tubiao_06.png" />
+        <img class="playScreen" src="images/newSource/0_03.png" onclick="playNowPro()"/>
+    </div>
+	<div class="tab">
+        <img class="moreFile" src="images/newSource/tubiao2_11.png" />
+    	<ul>
+        	<li typeValue="2"><span>视频</span></li>
+            <li typeValue="1"><span>音乐</span></li>
+            <li typeValue="0"><span>图片</span></li>
+            <li typeValue="3"><span>网页</span></li>
+            <li typeValue="4"><span>文章</span></li>
+        </ul>
+    </div>
+</div>
+<div class="fileShadowContent">
+    <div class="fileContent">
+        <div class="sourceContent sourceCommon" typeValue="0">
+            <div class="sourceContentTitle">
+                <img src="images/newSource/sourceContentSelected.png" class="titleIcon"/>
+                <span class="titleName" class="titleIcon">数字内容</span>
+                <img class="slideicon" src="images/newSource/slideDown.png" />
+            </div>
+            <ul class="fileFolderUl">
+            </ul>
+        </div>
+         <div class="lastedUpload sourceCommon" typeValue="1">
+             <div class="sourceContentTitle">
+                <img src="images/newSource/lastedUpload.png" class="titleIcon"/>
+                <span class="titleName">最近上传</span>
+                <img class="slideicon" src="images/newSource/slideUp.png" />
+            </div>
+             <ul class="fileFolderUl">
+            </ul>
+        </div>
+        <div class="nowData sourceCommon" typeValue="2">
+            <div class="sourceContentTitle">
+                <img src="images/newSource/nowData.png" class="titleIcon"/>
+                <span class="titleName">实时数据</span>
+                <img class="slideicon" src="images/newSource/slideUp.png" />
+            </div>
+            <ul class="fileFolderUl">
+            </ul>
+        </div>
+        <div class="MobileSave1 sourceCommon" typeValue="3">
+            <div class="sourceContentTitle">
+                <img src="images/newSource/MobileSave.png" class="titleIcon"/>
+                <span class="titleName">移动存储1</span>
+                <img class="slideicon" src="images/newSource/slideUp.png" />
+            </div>
+            <ul class="fileFolderUl">
+            </ul>
+        </div>
+        <div class="MobileSave2 sourceCommon" typeValue="4">
+            <div class="sourceContentTitle">
+                <img src="images/newSource/MobileSave.png" class="titleIcon"/>
+                <span class="titleName">移动存储2</span>
+                <img class="slideicon" src="images/newSource/slideUp.png" />
+            </div>
+            <ul class="fileFolderUl">
+            </ul>
+        </div>
+        <div class="MobileSave3 sourceCommon" typeValue="5">
+            <div class="sourceContentTitle">
+                <img src="images/newSource/MobileSave.png" class="titleIcon"/>
+                <span class="titleName">移动存储3</span>
+                <img class="slideicon" src="images/newSource/slideUp.png" />
+            </div>
+            <ul class="fileFolderUl">
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="contentCount">
+    </div>
+    <div class="contentSource">
+    </div>
+</div>
+<div class="swiper-container">
+	
+    <div class="swiper-wrapper">
+      <div class="swiper-slide video">
+          <div class="videoContent">
+              <ul>
+              </ul>
+          </div>
+      </div>
+      <div class="swiper-slide music">
+          <div class="musicContent">
+               <ul>
+              </ul>
+          </div>
+      </div>
+      <div class="swiper-slide image">
+          <div class="imageContent">
+               <ul>
+              </ul>
+          </div>
+      </div>
+      <div class="swiper-slide net">
+          <div class="netContent">
+               <ul>
+              </ul>
+          </div>
+      </div>
+      <div class="swiper-slide word">
+		   <div class="wordContent">
+               <ul>
+              </ul>
+          </div>
+      </div>
+    </div>
+</div>
+<div class="bottom">
+    <div class="controlBottom">
+        aa
+    </div>
+</div>
+
+<script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+
+
+<script charset="GB2312"> 
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        runCallbacksOnInit: false,
+        // on: {//此处不能用on,否则不能调用滑动程序
+        onSlideChangeStart: function (swiper) {
+            // alert('147');
+            content();
+            if ($(".fileFolderUl").find("li").length > 0) {
+                if (saveCurrentCookie != "") {
+                    getData("", $(".classFloder").attr("typevalue"), saveCurrentCookie);
+                } else {
+                    getData("", $(".classFloder").attr("typevalue"), saveCurrentCookie);
+                }
+
+            } else {
+                getData("", $(".classFloder").attr("typevalue"));
+            }
+           // getData("", $(".classFloder").attr("typevalue"), imagePath);
+            showJudge()
+            $(".bottom").hide();
+            getData("", $(".classFloder").attr("typevalue"));
+           
+        }
+        //}
+
+    })
+    $('.tab ul li').click(function () {
+        var indexo = $(this).index() + 1;
+        mySwiper.slideTo(indexo, 1000, false);//切换到第一个slide，速度为1秒
+        $.cookie("sourceTab", indexo);
+        content();
+        if ($(".fileFolderUl").find("li").length > 0) {
+            if (saveCurrentCookie != "") {
+                getData("", $(".classFloder").attr("typevalue"), saveCurrentCookie);
+            } else {
+                getData("", $(".classFloder").attr("typevalue"), saveCurrentCookie);
+            }
+            
+        } else {
+            getData("", $(".classFloder").attr("typevalue"));
+        }
+       // getData("", $(".classFloder").attr("typevalue"), imagePath);
+        showJudge();
+        $(".bottom").hide();
+        getAllData();
+       
+    })
+    if ($.cookie("sourceTab") != null && $.cookie("sourceTab") != "" && $.cookie("sourceTab") != undefined) {
+        if (window.location.href.indexOf("?") >= 0) {
+        } else {
+            mySwiper.slideTo($.cookie("sourceTab"), 1000, false);//切换到第一个slide，速度为1秒
+            $.cookie("sourceTab", $.cookie("sourceTab"));
+            content();
+        }
+    }
+  
+</script>
+</body>
+</html>
